@@ -30,7 +30,6 @@ const Auth = () => {
       } else {
         data = await authService.signInWithEmailAndPassword(email, password);
       }
-      console.log(data);
     } catch (error) {
       setError(error.message);
     }
@@ -50,7 +49,6 @@ const Auth = () => {
     }
 
     const data = await authService.signInWithPopup(provider);
-    console.log(data);
   };
 
   return (
